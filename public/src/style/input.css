@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "Estedad";
+  font-style: normal;
+  font-display: swap;
+  src: url(../../assets/fonts/Estedad-FD[KSHD\,wght].woff2) format("woff2");
+}
+
+@theme {
+  /* RESET */
+  --color-*: initial;
+  --breakpoint-2xl: initial;
+
+  /* FONT */
+  --font-primary: Estedad;
+  --leading-normal: 180%;
+  --leading-small: 140%;
+
+  /* COLOR */
+  /*  primary */
+  --color-primary: #417f56;
+  --color-primary-tint-1: #e5f2e9;
+  --color-primary-tint-2: #cae4d3;
+  --color-primary-tint-3: #b0d7bd;
+  --color-primary-tint-4: #96c9a7;
+  --color-primary-tint-5: #7cbc91;
+  --color-primary-tint-6: #61ae7b;
+  --color-primary-tint-7: #4e9968;
+  --color-primary-shade-1: #396f4b;
+  --color-primary-shade-2: #315f41;
+  --color-primary-shade-3: #294f36;
+  --color-primary-shade-4: #21402b;
+  --color-primary-shade-5: #183020;
+  --color-primary-shade-6: #102016;
+  --color-primary-shade-7: #08100b;
+  /*  nature */
+  --color-White: #fff;
+  --color-gray-1: #f9f9f9;
+  --color-gray-2: #e1e1e1;
+  --color-gray-3: #ededed;
+  --color-gray-4: #cbcbcb;
+  --color-gray-5: #adadad;
+  --color-gray-6: #757575;
+  --color-gray-7: #717171;
+  --color-gray-8: #353535;
+  --color-black: #000;
+  /*  semantic */
+  /*    success */
+  --color-success: #00966d;
+  --color-success-light: #00ba88;
+  --color-success-extralight: #f3fdfa;
+  /*    danger */
+  --color-error: #c30000;
+  --color-error-light: #ed2e2e;
+  --color-error-extralight: #fff2f2;
+  /*    warning */
+  --color-warning: #a9791c;
+  --color-warning-light: #f4b740;
+  --color-warning-extralight: #fff8e1;
+
+  /* SHADOW */
+  --shadow-2: 0 2px 2px rgba(0, 0, 0, 0.25);
+  --shadow-4: 0 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-6: 0 6px 6px rgba(0, 0, 0, 0.25);
+  --shadow-8: 0 8px 8px rgba(0, 0, 0, 0.25);
+  --shadow-12: 0 12px 12px rgba(0, 0, 0, 0.25);
+  --shadow-16: 0 16px 16px rgba(0, 0, 0, 0.25);
+  --shadow-submenu: 0 0 6px rgba(0, 0, 0, 0.15);
+  --shadow-cards: 0 16px 6px rgba(0, 0, 0, 0.01), 0 9px 5px rgba(0, 0, 0, 0.05), 0 4px 4px rgba(0, 0, 0, 0.09), 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-contact-cards: 0 42px 17px rgba(0, 0, 0, 0.02), 0 24px 14px rgba(0, 0, 0, 0.05), 0 11px 11px rgba(0, 0, 0, 0.09), 0 3px 6px rgba(0, 0, 0, 0.1), 0 0 0 rgba(0, 0, 0, 0.1);
+}
+
+@utility container {
+  @apply mx-auto px-7;
+}
+
+@utility h1 {
+  @apply text-[2.75rem]/small font-primary font-bold;
+}
+@utility h2 {
+  @apply text-[2.5rem]/small font-primary font-bold;
+}
+@utility h3 {
+  @apply text-[2rem]/small font-primary font-bold;
+}
+@utility h4 {
+  @apply text-2xl/small font-primary font-bold;
+}
+@utility h5 {
+  @apply text-xl/small font-primary font-bold;
+}
+@utility h6 {
+  @apply text-base/small font-primary font-bold;
+}
+@utility h7 {
+  @apply text-xl/normal font-primary font-semibold;
+}
+
+@utility font-body-xl {
+  @apply text-xl/normal font-primary font-normal;
+}
+@utility font-body-lg {
+  @apply text-lg/normal font-primary font-normal;
+}
+@utility font-body-md {
+  @apply text-base/normal font-primary font-normal;
+}
+@utility font-body-sm {
+  @apply text-sm/normal font-primary font-normal;
+}
+
+@utility font-caption-md {
+  @apply text-xs/normal font-primary font-normal;
+}
+@utility font-caption-lg {
+  @apply text-sm/normal font-primary font-bold;
+}
+@utility font-caption-sm {
+  @apply text-[.625rem]/normal font-primary font-bold;
+}
+
+@utility font-button-lg {
+  @apply text-base/normal font-primary font-semibold;
+}
+@utility font-button-sm {
+  @apply text-sm/[1.25rem] font-primary font-semibold;
+}
+
+@utility font-overline-lg {
+  @apply text-base/normal font-primary font-normal;
+}
+@utility font-overline-sm {
+  @apply text-xs/[normal] font-primary font-bold;
+}
+
+@utility nav-link__active {
+  @apply border-b text-primary transition-all delay-75 h6 lg:h5;
+}
+
+@layer components {
+  .header-submenu {
+    @apply hidden group-hover:block top-full z-40 absolute bg-White opacity-0 group-hover:opacity-100 shadow-2xl px-2 *:py-2 border-primary border-t rounded-sm divide-y divide-gray-3 w-36 font-body-sm text-gray-8 transition-all;
+  }
+}
