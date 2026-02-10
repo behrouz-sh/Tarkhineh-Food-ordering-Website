@@ -71,7 +71,7 @@
 }
 
 @utility container {
-  @apply mx-auto px-7;
+  @apply mx-auto px-4 lg:px-7;
 }
 
 @utility h1 {
@@ -140,5 +140,17 @@
 @layer components {
   .header-submenu {
     @apply hidden group-hover:block top-full z-40 absolute bg-White opacity-0 group-hover:opacity-100 shadow-2xl px-2 *:py-2 border-primary border-t rounded-sm divide-y divide-gray-3 w-36 font-body-sm text-gray-8 transition-all;
+  }
+  .section-title {
+    @apply text-gray-8 text-center h6 sm:h5 md:h4;
+  }
+  .menu-section__item {
+    @apply relative flex justify-center sm:gap-y-30 col-span-2 lg:col-span-3 bg-primary rounded-2xl h-20 sm:h-28 xl:h-40 cursor-pointer;
+  }
+  .menu-section__item-image {
+    @apply w-30 h-max sm:w-44 xl:w-60 -translate-y-1/2;
+  }
+  .menu-section__item-text {
+    @apply bottom-0 absolute bg-White text-gray-8 shadow-xl p-1.25 lg:p-1.5 rounded-sm w-8/12 font-body-md lg:font-body-xl text-center translate-y-1/2;
   }
 }
