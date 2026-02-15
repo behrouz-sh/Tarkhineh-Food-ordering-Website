@@ -113,10 +113,10 @@
   @apply text-xs/normal font-primary font-normal;
 }
 @utility font-caption-lg {
-  @apply text-sm/normal font-primary font-bold;
+  @apply text-sm/normal font-primary font-medium;
 }
 @utility font-caption-sm {
-  @apply text-[.625rem]/normal font-primary font-bold;
+  @apply text-[.625rem]/normal font-primary font-normal;
 }
 
 @utility font-button-lg {
@@ -138,6 +138,9 @@
 }
 
 @layer components {
+  .row {
+    @apply gap-x-4 lg:gap-x-6 grid grid-cols-4 lg:grid-cols-12;
+  }
   .header-submenu {
     @apply hidden group-hover:block top-full z-40 absolute bg-White opacity-0 group-hover:opacity-100 shadow-2xl px-2 *:py-2 border-primary border-t rounded-sm divide-y divide-gray-3 w-36 font-body-sm text-gray-8 transition-all;
   }
@@ -152,5 +155,38 @@
   }
   .menu-section__item-text {
     @apply bottom-0 absolute bg-White text-gray-8 shadow-xl p-1.25 lg:p-1.5 rounded-sm w-8/12 font-body-md lg:font-body-xl text-center translate-y-1/2;
+  }
+  .about-section__item {
+    @apply flex flex-col justify-center items-center gap-y-1 sm:gap-y-2 xl:gap-y-1 lg:py-4 xl:py-6.5 w-full;
+  }
+  .about-section__item-icon {
+    @apply size-6 sm:size-9 lg:size-10 xl:size-12 text-White;
+  }
+  .about-section__text {
+    @apply font-caption-md sm:font-caption-lg xl:font-body-lg;
+  }
+  .restaurant-branch__item {
+    @apply relative flex lg:flex-col items-center col-span-4 md:col-span-2 lg:col-span-3 hover:shadow-cards border border-gray-4 hover:border-primary focus:border-primary rounded-sm lg:rounded-lg h-20 sm:h-28 lg:h-72 xl:h-86 overflow-hidden transition-[border-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)];
+  }
+  .restaurant-branch__item-image-wrap {
+    @apply relative w-11/12 lg:w-full h-full lg:h-43 xl:h-57.5;
+  }
+  .restaurant-branch__item-image-overlay {
+    @apply hidden z-10 absolute inset-0 lg:flex justify-center items-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] pointer-events-none;
+  }
+  .restaurant-branch__item-image {
+    @apply size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)];
+  }
+  .restaurant-branch__item-wrapper {
+    @apply lg:bottom-0 z-20 lg:absolute flex flex-col justify-center items-center bg-White p-2 w-full h-full lg:h-auto text-center;
+  }
+  .restaurant-branch__item-title {
+    @apply mb-1 font-button-sm sm:font-button-lg text-gray-8 xl:h7;
+  }
+  .restaurant-branch__item-location {
+    @apply lg:h-12.5 font-caption-sm sm:font-body-sm xl:font-caption-lg text-gray-7;
+  }
+  .restaurant-branch__item-link {
+    @apply hidden lg:flex justify-center items-center gap-x-1 opacity-0 mx-auto my-2 border rounded-sm w-32 h-0 font-caption-md text-primary-shade-2 transition-all translate-y-2 duration-700 ease-[cubic-bezier(0.22,1,0.36,1)];
   }
 }
