@@ -1,9 +1,24 @@
 @import "tailwindcss";
+@import "swiper/css/bundle";
+
 @font-face {
   font-family: "Estedad";
   font-style: normal;
   font-display: swap;
   src: url(../../assets/fonts/Estedad-FD[KSHD\,wght].woff2) format("woff2");
+}
+
+@layer base {
+  :root {
+    --swiper-navigation-size: 32px;
+    --swiper-navigation-sides-offset: 24px;
+    --swiper-pagination-bottom: 4px;
+  }
+  @media (width >= 48rem /* md => 768px */) {
+    :root {
+      --swiper-pagination-bottom: 8px;
+    }
+  }
 }
 
 @theme {
@@ -120,7 +135,7 @@
 }
 
 @utility font-button-lg {
-  @apply text-base/normal font-primary font-semibold;
+  @apply text-base/normal font-primary font-medium;
 }
 @utility font-button-sm {
   @apply text-sm/[1.25rem] font-primary font-semibold;
@@ -143,6 +158,33 @@
   }
   .header-submenu {
     @apply hidden group-hover:block top-full z-40 absolute bg-White opacity-0 group-hover:opacity-100 shadow-2xl px-2 *:py-2 border-primary border-t rounded-sm divide-y divide-gray-3 w-36 font-body-sm text-gray-8 transition-all;
+  }
+  .swiper-pagination {
+    @apply flex justify-center items-center;
+  }
+  .swiper-pagination-bullet {
+    @apply !bg-gray-5 !opacity-100 !mx-0.5 !size-1 md:!size-2;
+  }
+  .swiper-pagination-bullet-active {
+    @apply !bg-primary !border-2 !border-primary-tint-1 !size-3 sm:!size-3 md:!size-4;
+  }
+  .slider-header__slide {
+    @apply !flex justify-center items-center text-center;
+  }
+  .slider-header__image {
+    @apply block size-full object-cover;
+  }
+  .slider-header__overlay {
+    @apply absolute inset-0 bg-primary-shade-4/50;
+  }
+  .slider-header__overlay--dark {
+    @apply absolute inset-0 bg-black/55;
+  }
+  .slider-header__text {
+    @apply absolute m-auto px-4 text-White h6 sm:h4 lg:h3 xl:h2;
+  }
+  .slider-header__btn {
+    @apply bottom-9 sm:bottom-12 md:bottom-14 xl:bottom-17 absolute flex justify-center items-center bg-primary px-2 sm:px-6 xl:px-8 rounded-lg h-6 sm:h-8 xl:h-10 font-caption-sm sm:font-caption-md xl:font-button-lg text-White;
   }
   .section-title {
     @apply text-gray-8 text-center h6 sm:h5 md:h4;
