@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ترخینه | سفارش غذا & رستوران</title>
+    <title>ترخینه | شعبات</title>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./src/style/index.css" />
   </head>
@@ -309,177 +309,188 @@
           </div>
         </div>
       </div>
-      <!-- menu -->
-      <section class="mb-11.5 sm:mb-14 md:mb-18">
-        <div class="container">
-          <h4 class="mb-18 sm:mb-30 lg:mb-32 xl:mb-38 text-center section-title">منوی رستوران</h4>
-          <div class="relative gap-y-26.5 sm:gap-y-36 lg:gap-y-0 row">
-            <a href="#" class="menu-section__item">
-              <img src="./assets/imgs/main-dish.png" class="menu-section__item-image" />
-              <span class="menu-section__item-text">غذای اصلی</span>
-            </a>
-            <a href="#" class="menu-section__item">
-              <img src="./assets/imgs/appetizer.png" class="menu-section__item-image" />
-              <span class="menu-section__item-text">پیش غذا</span>
-            </a>
-            <a href="#" class="menu-section__item">
-              <img src="./assets/imgs/dessert.png" class="menu-section__item-image" />
-              <span class="menu-section__item-text">دسر</span>
-            </a>
-            <a href="#" class="menu-section__item">
-              <img src="./assets/imgs/drink.png" class="w-24.5 sm:w-36 xl:w-60 -translate-y-[60%] menu-section__item-image" />
-              <span class="menu-section__item-text">نوشیدنی</span>
-            </a>
-          </div>
-        </div>
-      </section>
-      <!-- about us -->
-      <section class="bg-[linear-gradient(0,rgba(0,0,0,0.65)),url(../../assets/imgs/about-section.webp)] bg-cover bg-no-repeat bg-center mb-6 py-4 sm:py-10 md:py-12 text-White">
-        <div class="container">
-          <div class="gap-y-6 sm:gap-y-8 row">
-            <div class="col-span-4 lg:col-span-6">
-              <h4 class="font-overline-lg sm:h7 md:h5 xl:h4">رستوران‌های زنجیره‌ای ترخینه</h4>
-              <p class="my-2 xl:mt-6 xl:mb-4 font-caption-sm sm:font-caption-md md:font-body-md xl:font-body-xl">مهمان‌نوازی یکی از مهم‌ترین مشخصه‌های ایرانیان است و باعث افتخار ماست که بیش از 20 سال است خدمت‌گزار مردم شریف ایران هستیم. ما در رستوران‌های زنجیره‌ای ترخینه همواره تلاش کردیم که در محیطی اصیل بر پایه معماری و طراحی مدرن در کنار طبیعتی دلنواز، غذایی سالم و درخور شان شما عزیزان ارائه دهیم.</p>
-              <a href="#" class="flex justify-center items-center gap-x-2 mr-auto border rounded-sm w-38 xl:w-46 h-8 xl:h-10 font-caption-md xl:font-button-lg">
-                اطلاعات بیشتر
-                <svg class="size-4 xl:size-6">
-                  <use href="#arrow-left"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="hidden lg:block col-span-2"></div>
-            <div class="flex flex-col justify-center gap-y-4 sm:gap-y-6 xl:gap-y-2 col-span-4">
-              <div class="flex gap-x-6">
-                <div class="about-section__item">
-                  <svg class="about-section__item-icon">
-                    <use href="#user"></use>
-                  </svg>
-                  <span class="about-section__text">پرسنلی مجرب و حرفه‌ای</span>
-                </div>
-                <div class="about-section__item">
-                  <svg class="about-section__item-icon">
-                    <use href="#diagram"></use>
-                  </svg>
-                  <span class="about-section__text">کیفیت بالای غذاها</span>
-                </div>
-              </div>
-              <div class="flex gap-x-6">
-                <div class="about-section__item">
-                  <svg class="about-section__item-icon">
-                    <use href="#home-wifi"></use>
-                  </svg>
-                  <span class="about-section__text">محیطی دلنشین و آرام</span>
-                </div>
-                <div class="about-section__item">
-                  <svg class="about-section__item-icon">
-                    <use href="#menu-board"></use>
-                  </svg>
-                  <span class="about-section__text">منوی متنوع</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Restaurant branches -->
-      <section class="mb-6">
-        <div class="container">
-          <h4 class="text-center section-title">ترخینه گردی</h4>
-          <div class="gap-y-4 row">
-            <div class="group restaurant-branch__item">
-              <!-- image -->
-              <div class="group-hover:lg:h-35 group-hover:xl:h-47 restaurant-branch__item-image-wrap">
-                <div class="restaurant-branch__item-image-overlay">
-                  <div class="flex justify-center items-center">
-                    <svg class="absolute lg:size-6 xl:size-8">
-                      <use href="#gallery"></use>
-                    </svg>
-                    <div class="absolute bg-White/30 rounded-full size-10.5"></div>
-                    <div class="absolute bg-White/20 rounded-full size-14.5"></div>
+      <!-- special offer -->
+      <section class="relative mb-12 overflow-hidden">
+        <div class="container container-side-mask">
+          <h4 class="section-title">پیشنهاد ویژه</h4>
+          <div class="!overflow-visible swiper" id="special-offer-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <img src="./assets/imgs/foods/cabbage-leaf-stew.webp" class="product-card__img" />
+                  <div class="product-card__wrap">
+                    <span class="product-card__title">دلمه برگ کلم</span>
+                    <div class="product-card__content">
+                      <div>
+                        <div class="product-card__favorite-wrap">
+                          <svg class="product-card__favorite-icon">
+                            <use href="#heart"></use>
+                          </svg>
+                          <span class="product-card__favorite-text">افزودن به علاقمندی‌ها</span>
+                        </div>
+                        <div class="product-card__rate-wrap">
+                          <svg class="product-card__rate-icon">
+                            <use href="#star-rate"></use>
+                          </svg>
+                          <span class="product-card__rate-count-star">5</span>
+                          <span class="product-card__rate-text">(۵۲ امتیاز)</span>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="product-card__off-wrap">
+                          <span class="line-through">۲۲۰٬۰۰۰</span>
+                          <span class="product-card__off">%۸</span>
+                        </div>
+                        <span class="product-card__price">۲۰۹٬۰۰۰ تومان</span>
+                      </div>
+                    </div>
+                    <a href="#" class="btn-fill-primary btn btn-card">افزودن به سبد خرید</a>
                   </div>
                 </div>
-                <img class="group-hover:scale-105 restaurant-branch__item-image" src="./assets/imgs/ecbatan-branch.webp" alt="نمایی از شعبه اکباتان" />
               </div>
-              <!-- wrapper -->
-              <div class="restaurant-branch__item-wrapper">
-                <!-- title -->
-                <h5 class="restaurant-branch__item-title">شعبه اکباتان</h5>
-                <!-- description -->
-                <p class="restaurant-branch__item-location">شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم</p>
-                <!-- link -->
-                <a href="#" class="group-hover:opacity-100 group-hover:h-8 group-hover:translate-y-0 restaurant-branch__item-link">صفحه شعبه</a>
-              </div>
-            </div>
-            <div class="group restaurant-branch__item">
-              <!-- image -->
-              <div class="group-hover:lg:h-35 group-hover:xl:h-47 restaurant-branch__item-image-wrap">
-                <div class="restaurant-branch__item-image-overlay">
-                  <div class="flex justify-center items-center">
-                    <svg class="absolute lg:size-6 xl:size-8">
-                      <use href="#gallery"></use>
-                    </svg>
-                    <div class="absolute bg-White/30 rounded-full size-10.5"></div>
-                    <div class="absolute bg-White/20 rounded-full size-14.5"></div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <img src="./assets/imgs/foods/stuffed-eggplant.jpg" class="product-card__img" />
+                  <div class="product-card__wrap">
+                    <span class="product-card__title">بادمجان شکم‌پر</span>
+                    <div class="product-card__content">
+                      <div>
+                        <div class="product-card__favorite-wrap">
+                          <svg class="product-card__favorite-icon">
+                            <use href="#heart"></use>
+                          </svg>
+                          <span class="product-card__favorite-text">افزودن به علاقمندی‌ها</span>
+                        </div>
+                        <div class="product-card__rate-wrap">
+                          <svg class="product-card__rate-icon">
+                            <use href="#star-rate"></use>
+                          </svg>
+                          <span class="product-card__rate-count-star">4</span>
+                          <span class="product-card__rate-text">(۳۲ امتیاز)</span>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="product-card__off-wrap">
+                          <span class="line-through">۱۵۰٬۰۰۰</span>
+                          <span class="product-card__off">%۱۸</span>
+                        </div>
+                        <span class="product-card__price">۱۳۶٬۰۰۰ تومان</span>
+                      </div>
+                    </div>
+                    <a href="#" class="btn-fill-primary btn btn-card">افزودن به سبد خرید</a>
                   </div>
                 </div>
-                <img class="group-hover:scale-105 restaurant-branch__item-image" src="./assets/imgs/chalus-branch.webp" alt="نمایی از شعبه چالوس" />
               </div>
-              <!-- wrapper -->
-              <div class="restaurant-branch__item-wrapper">
-                <!-- title -->
-                <h5 class="restaurant-branch__item-title">شعبه چالوس</h5>
-                <!-- description -->
-                <p class="restaurant-branch__item-location">چالوس، خیابان ۱۷ شهریور، بعد کوچه کوروش، جنب داروخانه دکتر میلانی</p>
-                <!-- link -->
-                <a href="#" class="group-hover:opacity-100 group-hover:h-8 group-hover:translate-y-0 restaurant-branch__item-link">صفحه شعبه</a>
-              </div>
-            </div>
-            <div class="group restaurant-branch__item">
-              <!-- image -->
-              <div class="group-hover:lg:h-35 group-hover:xl:h-47 restaurant-branch__item-image-wrap">
-                <div class="restaurant-branch__item-image-overlay">
-                  <div class="flex justify-center items-center">
-                    <svg class="absolute lg:size-6 xl:size-8">
-                      <use href="#gallery"></use>
-                    </svg>
-                    <div class="absolute bg-White/30 rounded-full size-10.5"></div>
-                    <div class="absolute bg-White/20 rounded-full size-14.5"></div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <img src="./assets/imgs/foods/spinach-calzone.jpg" class="product-card__img" />
+                  <div class="product-card__wrap">
+                    <span class="product-card__title">کالزونه اسفناج</span>
+                    <div class="product-card__content">
+                      <div>
+                        <div class="product-card__favorite-wrap">
+                          <svg class="product-card__favorite-icon">
+                            <use href="#heart"></use>
+                          </svg>
+                          <span class="product-card__favorite-text">افزودن به علاقمندی‌ها</span>
+                        </div>
+                        <div class="product-card__rate-wrap">
+                          <svg class="product-card__rate-icon">
+                            <use href="#star-rate"></use>
+                          </svg>
+                          <span class="product-card__rate-count-star">5</span>
+                          <span class="product-card__rate-text">(۶۲ امتیاز)</span>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="product-card__off-wrap">
+                          <span class="line-through">۱۹۰٬۰۰۰</span>
+                          <span class="product-card__off">%۱۷</span>
+                        </div>
+                        <span class="product-card__price">۱۷۷٬۰۰۰ تومان</span>
+                      </div>
+                    </div>
+                    <a href="#" class="btn-fill-primary btn btn-card">افزودن به سبد خرید</a>
                   </div>
                 </div>
-                <img class="group-hover:scale-105 restaurant-branch__item-image" src="./assets/imgs/aqdasiyeh-branch.webp" alt="نمایی از شعبه اقدسیه" />
               </div>
-              <!-- wrapper -->
-              <div class="restaurant-branch__item-wrapper">
-                <!-- title -->
-                <h5 class="restaurant-branch__item-title">شعبه اقدسیه</h5>
-                <!-- description -->
-                <p class="restaurant-branch__item-location">خیابان اقدسیه ، نرسیده به میدان خیام، پلاک ۸</p>
-                <!-- link -->
-                <a href="#" class="group-hover:opacity-100 group-hover:h-8 group-hover:translate-y-0 restaurant-branch__item-link">صفحه شعبه</a>
-              </div>
-            </div>
-            <div class="group restaurant-branch__item">
-              <!-- image -->
-              <div class="group-hover:lg:h-35 group-hover:xl:h-47 restaurant-branch__item-image-wrap">
-                <div class="restaurant-branch__item-image-overlay">
-                  <div class="flex justify-center items-center">
-                    <svg class="absolute lg:size-6 xl:size-8">
-                      <use href="#gallery"></use>
-                    </svg>
-                    <div class="absolute bg-White/30 rounded-full size-10.5"></div>
-                    <div class="absolute bg-White/20 rounded-full size-14.5"></div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <img src="./assets/imgs/foods/mushroom-pizza.jpg" class="product-card__img" />
+                  <div class="product-card__wrap">
+                    <span class="product-card__title">پیتزا قارچ</span>
+                    <div class="product-card__content">
+                      <div>
+                        <div class="product-card__favorite-wrap">
+                          <svg class="product-card__favorite-icon">
+                            <use href="#heart"></use>
+                          </svg>
+                          <span class="product-card__favorite-text">افزودن به علاقمندی‌ها</span>
+                        </div>
+                        <div class="product-card__rate-wrap">
+                          <svg class="product-card__rate-icon">
+                            <use href="#star-rate"></use>
+                          </svg>
+                          <span class="product-card__rate-count-star">3</span>
+                          <span class="product-card__rate-text">(۳۳ امتیاز)</span>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="product-card__off-wrap">
+                          <span class="line-through">۲۱۵٬۰۰۰</span>
+                          <span class="product-card__off">%۲۵</span>
+                        </div>
+                        <span class="product-card__price">۱۷۵٬۰۰۰ تومان</span>
+                      </div>
+                    </div>
+                    <a href="#" class="btn-fill-primary btn btn-card">افزودن به سبد خرید</a>
                   </div>
                 </div>
-                <img class="group-hover:scale-105 restaurant-branch__item-image" src="./assets/imgs/vank-ranch.webp" alt="نمایی از شعبه ونک" />
               </div>
-              <!-- wrapper -->
-              <div class="restaurant-branch__item-wrapper">
-                <!-- title -->
-                <h5 class="restaurant-branch__item-title">شعبه اقدسیه</h5>
-                <!-- description -->
-                <p class="restaurant-branch__item-location">خیابان اقدسیه ، نرسیده به میدان خیام، پلاک ۸</p>
-                <!-- link -->
-                <a href="#" class="group-hover:opacity-100 group-hover:h-8 group-hover:translate-y-0 restaurant-branch__item-link">صفحه شعبه</a>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <img src="./assets/imgs/foods/vegetable-pasta.jpg" class="product-card__img" />
+                  <div class="product-card__wrap">
+                    <span class="product-card__title">پاستا سبزیجات</span>
+                    <div class="product-card__content">
+                      <div>
+                        <div class="product-card__favorite-wrap">
+                          <svg class="product-card__favorite-icon">
+                            <use href="#heart"></use>
+                          </svg>
+                          <span class="product-card__favorite-text">افزودن به علاقمندی‌ها</span>
+                        </div>
+                        <div class="product-card__rate-wrap">
+                          <svg class="product-card__rate-icon">
+                            <use href="#star-rate"></use>
+                          </svg>
+                          <span class="product-card__rate-count-star">5</span>
+                          <span class="product-card__rate-text">(۵۰ امتیاز)</span>
+                        </div>
+                      </div>
+                      <div>
+                        <span class="product-card__price">۱۵۰۰۰۰ تومان</span>
+                      </div>
+                    </div>
+                    <a href="#" class="btn-fill-primary btn btn-card">افزودن به سبد خرید</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hidden md:block">
+              <div class="text-wrap swiper-button-next pup-button-next">
+                <div class="slider-btn">
+                  <svg class="slider-btn__icon">
+                    <use href="#arrow-left"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="text-wrap swiper-button-prev pup-button-prev">
+                <div class="slider-btn">
+                  <svg class="slider-btn__icon">
+                    <use href="#arrow-right"></use>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -556,9 +567,9 @@
           </div>
         </div>
       </footer>
-
       <div id="sidebar-mobile__overlay" class="hidden fixed inset-0 bg-black/60"></div>
     </main>
     <script src="./src/script/shared.js" type="module"></script>
+    <script src="./src/script/branches.js" type="module"></script>
   </body>
 </html>

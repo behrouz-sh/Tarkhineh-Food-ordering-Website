@@ -1,11 +1,15 @@
 import { initMobileSidebar } from "./funcs/shared.js";
 import Swiper from "../../../node_modules/swiper/swiper-bundle.min.mjs";
 window.addEventListener("DOMContentLoaded", () => {
-  var swiper = new Swiper(".mySwiper", {
+  fetch("./icons.svg")
+    .then((res) => res.text())
+    .then((svg) => document.body.insertAdjacentHTML("afterbegin", svg));
+
+  var swiper = new Swiper("#hero-slider", {
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: "#slider-button-next",
+      prevEl: "#slider-button-prev",
     },
     pagination: {
       el: ".swiper-pagination",
