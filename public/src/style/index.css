@@ -297,9 +297,6 @@
   .mb-11\.5 {
     margin-bottom: calc(var(--spacing) * 11.5);
   }
-  .mb-12 {
-    margin-bottom: calc(var(--spacing) * 12);
-  }
   .mb-18 {
     margin-bottom: calc(var(--spacing) * 18);
   }
@@ -372,16 +369,6 @@
       --tw-font-weight: var(--font-weight-medium);
       font-weight: var(--font-weight-medium);
     }
-  }
-  .btn-size-40 {
-    height: calc(var(--spacing) * 10);
-    column-gap: calc(var(--spacing) * 2);
-    padding-inline: calc(var(--spacing) * 4);
-    font-family: var(--font-primary);
-    font-size: var(--text-base);
-    line-height: var(--leading-normal);
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
   }
   .btn-card {
     height: calc(var(--spacing) * 8);
@@ -537,9 +524,6 @@
   .\!overflow-visible {
     overflow: visible !important;
   }
-  .overflow-hidden {
-    overflow: hidden;
-  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
@@ -607,6 +591,9 @@
       background-color: color-mix(in oklab, var(--color-black) 60%, transparent);
     }
   }
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
   .bg-primary-tint-1 {
     background-color: var(--color-primary-tint-1);
   }
@@ -643,11 +630,11 @@
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
+  .pt-3 {
+    padding-top: calc(var(--spacing) * 3);
+  }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
-  }
-  .pt-6 {
-    padding-top: calc(var(--spacing) * 6);
   }
   .pr-2 {
     padding-right: calc(var(--spacing) * 2);
@@ -655,8 +642,8 @@
   .pr-3 {
     padding-right: calc(var(--spacing) * 3);
   }
-  .pb-10 {
-    padding-bottom: calc(var(--spacing) * 10);
+  .pb-6 {
+    padding-bottom: calc(var(--spacing) * 6);
   }
   .pl-1 {
     padding-left: calc(var(--spacing) * 1);
@@ -913,6 +900,11 @@
       margin-bottom: calc(var(--spacing) * 2);
     }
   }
+  .sm\:mb-8 {
+    @media (width >= 40rem) {
+      margin-bottom: calc(var(--spacing) * 8);
+    }
+  }
   .sm\:mb-14 {
     @media (width >= 40rem) {
       margin-bottom: calc(var(--spacing) * 14);
@@ -1167,6 +1159,11 @@
       row-gap: calc(var(--spacing) * 4);
     }
   }
+  .lg\:pt-6 {
+    @media (width >= 64rem) {
+      padding-top: calc(var(--spacing) * 6);
+    }
+  }
   .lg\:pt-8 {
     @media (width >= 64rem) {
       padding-top: calc(var(--spacing) * 8);
@@ -1175,6 +1172,11 @@
   .lg\:pr-3 {
     @media (width >= 64rem) {
       padding-right: calc(var(--spacing) * 3);
+    }
+  }
+  .lg\:pb-10 {
+    @media (width >= 64rem) {
+      padding-bottom: calc(var(--spacing) * 10);
     }
   }
   .lg\:font-body-xl {
@@ -2002,10 +2004,13 @@
   src: url(../../assets/fonts/Estedad-FD[KSHD\,wght].woff2) format("woff2");
 }
 @layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
   :root {
     --swiper-navigation-size: 40px;
     --swiper-navigation-sides-offset: -1rem;
-    --swiper-navigation-top-offset: 61%;
+    --swiper-navigation-top-offset: 65%;
     --swiper-pagination-bottom: 4px;
   }
   @media (width >= 48rem ) {
@@ -2092,29 +2097,6 @@
   .slider-header-btn {
     top: calc(1/2 * 100%) !important;
     color: var(--color-White) !important;
-  }
-  .container-side-mask::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-left: calc(max((100vw - 48rem) / 2)) solid var(--mask-color, #fff);
-    border-right: calc(max((100vw - 48rem) / 2)) solid var(--mask-color, #fff);
-    opacity: 80%;
-    z-index: 5;
-    box-sizing: content-box;
-    pointer-events: none;
-  }
-  @media (width >= 64rem ) {
-    .container-side-mask::after {
-      border-left-width: calc(max((100dvw - 64rem) / 2) + 0.4rem);
-      border-right-width: calc(max((100dvw - 64rem) / 2) + 0.4rem);
-    }
-  }
-  @media (width >= 80rem ) {
-    .container-side-mask::after {
-      border-left-width: calc(max((100dvw - 80rem) / 2) + 0.4rem);
-      border-right-width: calc(max((100dvw - 80rem) / 2) + 0.4rem);
-    }
   }
   .header-submenu {
     position: absolute;
@@ -2245,6 +2227,17 @@
       bottom: calc(var(--spacing) * 17);
     }
   }
+  .slider-section {
+    position: relative;
+    margin-bottom: calc(var(--spacing) * 6);
+    overflow: hidden;
+    @media (width >= 40rem) {
+      margin-bottom: calc(var(--spacing) * 8);
+    }
+    @media (width >= 64rem) {
+      margin-bottom: calc(var(--spacing) * 12);
+    }
+  }
   .section-title {
     margin-bottom: calc(var(--spacing) * 3);
     font-family: var(--font-primary);
@@ -2283,6 +2276,14 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
     border-color: var(--color-gray-4);
+    background-color: var(--color-White);
+    opacity: 50%;
+    transition-property: opacity;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .swiper-slide-visible .product-card {
+    opacity: 100%;
   }
   .product-card__img {
     display: block;

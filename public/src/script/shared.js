@@ -1,5 +1,5 @@
 import { initMobileSidebar } from "./funcs/shared.js";
-import Swiper from "../../../node_modules/swiper/swiper-bundle.min.mjs";
+
 window.addEventListener("DOMContentLoaded", () => {
   fetch("./icons.svg")
     .then((res) => res.text())

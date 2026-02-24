@@ -12,7 +12,7 @@
   :root {
     --swiper-navigation-size: 40px;
     --swiper-navigation-sides-offset: -1rem;
-    --swiper-navigation-top-offset: 61%;
+    --swiper-navigation-top-offset: 65%;
     --swiper-pagination-bottom: 4px;
   }
   @media (width >= 48rem /* md => 768px */) {
@@ -244,31 +244,6 @@
   .slider-header-btn {
     @apply !top-1/2 !text-White;
   }
-  /* Container Side Mask */
-  .container-side-mask::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-left: calc(max((100vw - 48rem) / 2)) solid var(--mask-color, #fff);
-    border-right: calc(max((100vw - 48rem) / 2)) solid var(--mask-color, #fff);
-    opacity: 80%;
-    z-index: 5;
-    box-sizing: content-box;
-    pointer-events: none;
-  }
-  @media (width >= 64rem /* md => 1024px */) {
-    .container-side-mask::after {
-      border-left-width: calc(max((100dvw - 64rem) / 2) + 0.4rem);
-      border-right-width: calc(max((100dvw - 64rem) / 2) + 0.4rem);
-    }
-  }
-  @media (width >= 80rem /* md => 1280px */) {
-    .container-side-mask::after {
-      border-left-width: calc(max((100dvw - 80rem) / 2) + 0.4rem);
-      border-right-width: calc(max((100dvw - 80rem) / 2) + 0.4rem);
-    }
-  }
-
   .header-submenu {
     @apply hidden group-hover:block top-full z-40 absolute bg-White opacity-0 group-hover:opacity-100 shadow-2xl px-2 *:py-2 border-primary border-t rounded-sm divide-y divide-gray-3 w-36 font-body-sm text-gray-8 transition-all;
   }
@@ -290,11 +265,17 @@
   .slider-header__btn {
     @apply bottom-8 sm:bottom-12 md:bottom-14 xl:bottom-17 absolute px-8 h-6! sm:h-8! lg:h-10!;
   }
+  .slider-section {
+    @apply relative mb-6 sm:mb-8 lg:mb-12 overflow-hidden;
+  }
   .section-title {
     @apply mb-3 sm:mb-4 lg:mb-5 xl:mb-6 text-gray-8 h6 sm:h5 md:h4;
   }
   .product-card {
-    @apply border border-gray-4 rounded-lg overflow-hidden;
+    @apply bg-White opacity-50 border border-gray-4 rounded-lg overflow-hidden transition-opacity;
+  }
+  .swiper-slide-visible .product-card {
+    @apply opacity-100;
   }
   .product-card__img {
     @apply block w-full aspect-[84/55] max-h-48 lg:max-h-max lg:aspect-[9/8]  object-cover;

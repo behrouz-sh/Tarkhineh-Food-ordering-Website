@@ -1,12 +1,10 @@
-import Swiper from "../../../node_modules/swiper/swiper-bundle.min.mjs";
-
 window.addEventListener("DOMContentLoaded", () => {
-  var swiper = new Swiper("#special-offer-slider", {
+  var swiper = new Swiper("#cards-food-slider", {
     slidesPerView: 1.65,
     spaceBetween: 16,
     navigation: {
-      nextEl: ".pup-button-next",
-      prevEl: ".pup-button-prev",
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     breakpoints: {
       640: {
@@ -20,5 +18,6 @@ window.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 4,
       },
     },
+    watchSlidesProgress: true,
   });
 });
