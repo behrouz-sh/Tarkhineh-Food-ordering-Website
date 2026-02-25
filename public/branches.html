@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./src/style/index.css" />
   </head>
-  <body class="min-h-screen font-primary font-normal">
+  <body class="font-primary font-normal">
     <main>
       <!-- header -->
       <header class="py-4 md:py-8">
@@ -226,7 +226,7 @@
       </header>
       <!-- hero slider -->
       <section class="relative mb-6 sm:mb-8 w-full h-44 sm:h-72 xl:h-84">
-        <div class="size-full swiper" id="hero-slider">
+        <div class="size-full swiper" id="banner-slider">
           <div class="swiper-wrapper">
             <div class="slider-header__slide swiper-slide">
               <img loading="lazy" src="./assets/imgs/slider-img.webp" class="slider-header__image" />
@@ -278,12 +278,12 @@
             </div>
           </div>
           <div class="hidden md:block">
-            <div class="!left-6 text-wrap swiper-button-next slider-header-btn" id="slider-button-next">
+            <div class="banner-slider-btn--left text-wrap swiper-button-next" id="slider-button-next">
               <svg>
                 <use href="#arrow-left"></use>
               </svg>
             </div>
-            <div class="!right-6 text-wrap swiper-button-prev slider-header-btn" id="slider-button-prev">
+            <div class="banner-slider-btn--right text-wrap swiper-button-prev" id="slider-button-prev">
               <svg>
                 <use href="#arrow-right"></use>
               </svg>
@@ -866,6 +866,77 @@
                   </svg>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- branch info -->
+      <section class="relative mb-18.5 xl:mb-36.25">
+        <div class="flex flex-col items-center container">
+          <h4 class="text-center section-title">شعبه اکباتان</h4>
+        </div>
+        <div class="w-full h-44 sm:h-72 xl:h-84 size-full swiper" id="banner-slider">
+          <div class="swiper-wrapper">
+            <div class="slider-header__slide swiper-slide">
+              <img loading="lazy" src="./assets/imgs/branch-picture.png" class="slider-header__image" />
+              <div class="slider-header__overlay--dark-20"></div>
+            </div>
+            <div class="slider-header__slide swiper-slide">
+              <img loading="lazy" src="./assets/imgs/branch-picture.png" class="slider-header__image" />
+              <div class="slider-header__overlay--dark-20"></div>
+            </div>
+            <div class="slider-header__slide swiper-slide">
+              <img loading="lazy" src="./assets/imgs/branch-picture.png" class="slider-header__image" />
+              <div class="slider-header__overlay--dark-20"></div>
+            </div>
+            <div class="slider-header__slide swiper-slide">
+              <img loading="lazy" src="./assets/imgs/branch-picture.png" class="slider-header__image" />
+              <div class="slider-header__overlay--dark-20"></div>
+            </div>
+            <div class="slider-header__slide swiper-slide">
+              <img loading="lazy" src="./assets/imgs/branch-picture.png" class="slider-header__image" />
+              <div class="slider-header__overlay--dark-20"></div>
+            </div>
+            <div class="slider-header__slide swiper-slide">
+              <img loading="lazy" src="./assets/imgs/branch-picture.png" class="slider-header__image" />
+              <div class="slider-header__overlay--dark-20"></div>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="banner-slider-btn--left text-wrap swiper-button-next" id="slider-button-next">
+              <svg>
+                <use href="#arrow-left"></use>
+              </svg>
+            </div>
+            <div class="banner-slider-btn--right text-wrap swiper-button-prev" id="slider-button-prev">
+              <svg>
+                <use href="#arrow-right"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="top-[92%] right-0 left-0 z-10 absolute h-fit container">
+          <div class="*:inline-flex flex flex-row xl:*:flex-col flex-wrap xl:flex-nowrap justify-center items-center *:items-center gap-2 lg:gap-3 xl:gap-x-10.75 *:gap-x-1 *:gap-y-2 bg-White mx-auto p-2 xl:px-12 xl:py-4 border-3 border-primary rounded-xl w-full xl:*:w-1/3 xl:w-[63.3%] xl:*:h-24.5 font-caption-sm lg:font-body-md text-center">
+            <div class="xl:-order-2">
+              <svg class="size-4 lg:size-6 xl:size-8">
+                <use href="#call-calling"></use>
+              </svg>
+              <div>
+                <span>۰۲۱-۳۳۵۳۵۳۵۴</span>
+                <span class="hidden lg:inline">۰۲۱-۳۳۵۳۵۳۵۴</span>
+              </div>
+            </div>
+            <div class="-order-1">
+              <svg class="size-4 lg:size-6 xl:size-8">
+                <use href="#location"></use>
+              </svg>
+              <span>شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم</span>
+            </div>
+            <div class="">
+              <svg class="size-4 lg:size-6 xl:size-8">
+                <use href="#clock"></use>
+              </svg>
+              <span>همه‌روزه از ساعت ۱۲ الی ۲۳</span>
             </div>
           </div>
         </div>

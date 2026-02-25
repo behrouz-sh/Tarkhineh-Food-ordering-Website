@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
     .then((res) => res.text())
     .then((svg) => document.body.insertAdjacentHTML("afterbegin", svg));
 
-  var swiper = new Swiper("#hero-slider", {
+  var swiper = new Swiper("#banner-slider", {
     loop: true,
     navigation: {
       nextEl: "#slider-button-next",

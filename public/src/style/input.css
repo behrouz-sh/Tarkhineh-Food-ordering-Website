@@ -241,8 +241,15 @@
   .slider-btn__icon {
     @apply !size-5 xl:!size-8;
   }
-  .slider-header-btn {
+  .banner-slider-btn--right,
+  .banner-slider-btn--left {
     @apply !top-1/2 !text-White;
+  }
+  .banner-slider-btn--right {
+    @apply right-6!;
+  }
+  .banner-slider-btn--left {
+    @apply left-6!;
   }
   .header-submenu {
     @apply hidden group-hover:block top-full z-40 absolute bg-White opacity-0 group-hover:opacity-100 shadow-2xl px-2 *:py-2 border-primary border-t rounded-sm divide-y divide-gray-3 w-36 font-body-sm text-gray-8 transition-all;
@@ -256,8 +263,15 @@
   .slider-header__overlay {
     @apply absolute inset-0 bg-primary-shade-4/50;
   }
+  .slider-header__overlay--dark,
+  .slider-header__overlay--dark-20 {
+    @apply absolute inset-0;
+  }
   .slider-header__overlay--dark {
-    @apply absolute inset-0 bg-black/55;
+    @apply bg-black/55;
+  }
+  .slider-header__overlay--dark-20 {
+    @apply bg-black/20;
   }
   .slider-header__text {
     @apply absolute m-auto px-4 text-White h6 sm:h4 lg:h3 xl:h2;
