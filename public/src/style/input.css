@@ -14,10 +14,16 @@
     --swiper-navigation-sides-offset: -1rem;
     --swiper-navigation-top-offset: 65%;
     --swiper-pagination-bottom: 4px;
+
+    --px-comment-card: 1.25rem;
+    --py-comment-card: 1rem;
   }
   @media (width >= 48rem /* md => 768px */) {
     :root {
       --swiper-pagination-bottom: 8px;
+
+      --px-comment-card: 2rem;
+      --py-comment-card: 1.5rem;
     }
   }
   @media (width >= 80rem /* md => 1280px */) {
@@ -223,6 +229,14 @@
 }
 @layer components {
   /* Rest Style Swiper - JS */
+  .swiper-slide .product-card,
+  .swiper-slide .comment-card {
+    @apply opacity-50;
+  }
+  .swiper-slide-visible .product-card,
+  .swiper-slide-visible .comment-card {
+    @apply opacity-100;
+  }
   .swiper-pagination {
     @apply flex justify-center items-center;
   }
@@ -286,10 +300,7 @@
     @apply mb-3 sm:mb-4 lg:mb-5 xl:mb-6 text-gray-8 h6 sm:h5 md:h4;
   }
   .product-card {
-    @apply bg-White opacity-50 border border-gray-4 rounded-lg overflow-hidden transition-opacity;
-  }
-  .swiper-slide-visible .product-card {
-    @apply opacity-100;
+    @apply bg-White border border-gray-4 rounded-lg overflow-hidden transition-opacity;
   }
   .product-card__img {
     @apply block w-full aspect-[84/55] max-h-48 lg:max-h-max lg:aspect-[9/8]  object-cover;
@@ -374,5 +385,26 @@
   }
   .restaurant-branch__item-link {
     @apply hidden lg:flex justify-center items-center gap-x-1 opacity-0 mx-auto my-2 border rounded-sm w-32 h-0 font-caption-md text-primary-shade-2 transition-all translate-y-2 duration-700 ease-[cubic-bezier(0.22,1,0.36,1)];
+  }
+  .comment-card {
+    @apply relative flex *:flex *:flex-col *:justify-center *:items-center gap-x-3 px-[var(--px-comment-card)] py-[var(--py-comment-card)] border border-gray-4 rounded-lg transition-opacity;
+  }
+  .comment-card__user-info-wrap {
+    @apply font-caption-sm xl:font-body-sm text-gray-7 text-center whitespace-nowrap;
+  }
+  .comment-card__user-profile {
+    @apply block mb-2 rounded-full xl:min-w-24 xl:h-24 size-14;
+  }
+  .comment-card__text {
+    @apply font-caption-sm xl:font-body-md text-right;
+  }
+  .comment-card__rate-wrap {
+    @apply bottom-[var(--py-comment-card)] left-[var(--px-comment-card)] absolute flex flex-row! items-center gap-x-1 xl:p-0 px-2;
+  }
+  .comment-card__rate-icon {
+    @apply size-3 xl:size-4;
+  }
+  .comment-card__rate-count {
+    @apply font-caption-md xl:font-button-lg;
   }
 }
